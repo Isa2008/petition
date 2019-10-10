@@ -1,0 +1,25 @@
+<div class="menu">
+    <nav>
+        <p><a href="/manifesto">manifesto</a></p>
+        <p><a href="/logout">logout</a></p>
+    </nav>
+</div>
+<header>
+    <h4>CALLING FOR A GREATER TRANSPARENCY, SUSTAINIBILITY AND ETHICS IN THE FASHION INDUSTRY</h4>
+</header>
+<div class="wrapper">
+    <h1>together we can change the future</h1>
+    <h2>we are the signers from {{city}}</h2>
+        {{#signers}}
+            <p class="signers">
+                {{#if url}}
+                    <a href="{{url}}" target="_blank">{{firstname}} {{lastname}}</a>
+                {{else}}
+                    {{firstname}} {{lastname}}
+                {{/if}}
+                {{#if age}}
+                    {{age}}
+                {{/if}}
+            </p>
+        {{/signers}}
+</div>

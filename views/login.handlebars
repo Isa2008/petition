@@ -1,0 +1,23 @@
+<div class="menu">
+    <nav>
+        <p><a href="/manifesto">manifesto</a></p>
+        <p><a href="/login">login</a></p>
+    </nav>
+</div>
+<header>
+    <h4>CALLING FOR A GREATER TRANSPARENCY, SUSTAINIBILITY AND ETHICS IN THE FASHION INDUSTRY</h4>
+</header>
+<div class="wrapper">
+    <form method="POST">
+        <h1>because there is no planet b</h1>
+        <h2>login</h2>
+        <input type="email" class="inputfields" name ="email" placeholder="email" autocomplete="off"></input>
+        <input type="password" class="inputfields" name="password" autocomplete="off" placeholder="password" autocomplete="off"></input>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        {{#if error}}
+            <div class="error">something went wrong, try again</div>
+        {{/if}}
+        <button id="submit">login</button>
+        <p class="linkto">or go to <a href="/register">signup</a><p>
+    </form>
+</div>

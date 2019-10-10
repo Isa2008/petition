@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Finger+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(whomademyclothes.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffcece;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    margin-top: 15px;
+}
+
+nav p {
+    font-family: "Finger Paint", cursive;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+nav p a {
+    color: grey;
+}
+
+nav p:hover {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-manifesto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30%;
+}
+
+.manifesto {
+    font-family: "Vollkorn", serif;
+    font-size: 1em;
+    width: 45%;
+    padding-top: 30px;
+}
+
+.manifesto p {
+    color: #3299ff;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-bottom: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #000;
+    margin-top: 40px;
+}
+
+h2 {
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #000;
+    margin-top: 15px;
+}
+
+h4 {
+    color: #3299ff;
+    margin-top: 5px;
+    align-self: center;
+}
+
+p {
+    color: #5c5f63;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputfields {
+    color: #3299ff;
+    font-family: "Finger Paint", cursive;
+    display: flex;
+    background-color: transparent;
+    border: 0px;
+    font-size: 1.5em;
+    width: 400px;
+    height: 50px;
+    /* padding-left: 10px; */
+    margin-top: 2px;
+}
+
+.inputfields:visited {
+    color: #3299ff;
+    background-color: transparent;
+    display: flex;
+    border: 0px;
+    font-size: 1.5em;
+    width: 400px;
+    height: 50px;
+    margin-top: 2px;
+}
+
+h5 {
+    display: inline;
+    color: black;
+    font-size: 1em;
+    text-decoration: overline black;
+    width: 400px;
+}
+
+.signers {
+    font-size: 1.5em;
+}
+
+.signers a {
+    font-size: 1.1em;
+    font-family: "Finger Paint", cursive;
+    color: grey;
+}
+
+#submit {
+    font-family: "Finger Paint", cursive;
+    color: #3299ff;
+    background-color: #ffcece;
+    font-size: 1.2em;
+    border: 1px solid #3299ff;
+    border-radius: 100px;
+    width: 120px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: #ffcece;
+    background-color: #000;
+    border: 1px solid black;
+}
+
+#delete {
+    font-family: "Finger Paint", cursive;
+    color: #3299ff;
+    background-color: #ffcece;
+    font-size: 1.2em;
+    border: 1px solid #3299ff;
+    border-radius: 100px;
+    width: 250px;
+    height: 45px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#delete:hover {
+    color: #ffcece;
+    background-color: black;
+    border: 1px solid black;
+}
+
+#delete a {
+    color: #3299ff;
+}
+
+#delete:hover a {
+    color: #ffcece;
+}
+
+.linkto a {
+    font-family: "Finger Paint", cursive;
+    color: #3299ff;
+    font-size: 1.2em;
+}
+
+.linkto {
+    margin-bottom: 10px;
+}
+
+.linkto:hover a {
+    color: #000;
+}
+
+.goto a {
+    color: tomato;
+    padding: 0px;
+}
+
+.profile {
+    color: #000;
+    margin-bottom: 15px;
+}
+
+#canvas {
+    color: tomato;
+    width: 550px;
+    height: 190px;
+    border: 1px tomato solid;
+    cursor: pointer;
+}
+
+img {
+    width: 550px;
+    height: 190px;
+    border: 1px tomato solid;
+}
+
+.error {
+    color: tomato;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-right: 120px;
+}

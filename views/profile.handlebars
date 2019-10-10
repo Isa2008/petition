@@ -1,0 +1,20 @@
+<div class="menu">
+    <nav>
+        <p><a href="/manifesto">manifesto</a></p>
+        <p><a href="/logout">logout</a></p>
+    </nav>
+</div>
+<header>
+    <h4>CALLING FOR A GREATER TRANSPARENCY, SUSTAINIBILITY AND ETHICS IN THE FASHION INDUSTRY</h4>
+</header>
+<div class="wrapper">
+    <form method="POST">
+        <h1>thanks for signing up!</h1>
+        <h2>tell us more about yourself if you like to</h2>
+        <input type="number" class="inputfields" name ="age" placeholder="age">
+        <input type="text" class="inputfields" name="city" placeholder="city">
+        <input type="text" class="inputfields" name="homepage" placeholder="homepage">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <button id="submit">submit</button>
+    </form>
+</div>
