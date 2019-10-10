@@ -84,9 +84,43 @@ app.post("/register", (req, res) => {
     }
 });
 
-//// MANIFESTO
-app.get("/manifesto", (req, res) => {
-    res.render("manifesto");
+//// LOGIN
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+//// POST LOGIN
+app.post("/login", (req, res) => {
+    db.getHashed(req.body.email)
+        .then(result => {
+            compare(req.body.password, result[0].password)
+                .then(match => {
+                    if (match) {
+                        req.session.loggedIn = true;
+                        req.session.userId = result[0].id;
+                        req.session.signatureId = result[0].user_id;
+                        if (req.session.signatureId) {
+                            res.redirect("/thanks");
+                        } else {
+                            res.redirect("/petition");
+                        }
+                    } else {
+                        res.render("login", {
+                            error1: "error"
+                        });
+                    }
+                })
+                .catch(e => {
+                    res.render("login", {
+                        error: "error"
+                    });
+                });
+        })
+        .catch(e => {
+            res.render("login", {
+                error: "error"
+            });
+        });
 });
 
 //// PROFILE
@@ -126,6 +160,41 @@ app.get("/petition", (req, res) => {
     } else {
         res.redirect("register");
     }
+});
+
+//// POST PETITION
+app.post("/petition", (req, res) => {
+    db.addSignature(req.body.signature, req.session.userId)
+        .then(id => {
+            req.session.signatureId = id;
+            res.redirect("/thanks");
+        })
+        .catch(err => {
+            res.render("petition", {
+                error: "error"
+            });
+        });
+});
+
+//// THANKS
+app.get("/thanks", (req, res) => {
+    db.getSignature(req.session.userId)
+        .then(signature => {
+            res.render("thanks", {
+                signature: signature[0].signature,
+                layout: "main"
+            });
+        })
+        .catch(err => {
+            res.redirect("/petition");
+        });
+});
+
+//// POST THANKS
+app.post("/thanks", (req, res) => {
+    db.deleteSignature(req.session.userId);
+    req.session.signatureId = null;
+    res.redirect("/petition");
 });
 
 //// EDIT PROFILE
@@ -231,80 +300,6 @@ app.post("/edit", (req, res) => {
     }
 });
 
-//// POST PETITION
-app.post("/petition", (req, res) => {
-    db.addSignature(req.body.signature, req.session.userId)
-        .then(id => {
-            req.session.signatureId = id;
-            res.redirect("/thanks");
-        })
-        .catch(err => {
-            res.render("petition", {
-                error: "error"
-            });
-        });
-});
-
-//// LOGIN
-app.get("/login", (req, res) => {
-    res.render("login");
-});
-
-//// POST LOGIN
-app.post("/login", (req, res) => {
-    db.getHashed(req.body.email)
-        .then(result => {
-            compare(req.body.password, result[0].password)
-                .then(match => {
-                    if (match) {
-                        req.session.loggedIn = true;
-                        req.session.userId = result[0].id;
-                        req.session.signatureId = result[0].user_id;
-                        if (req.session.signatureId) {
-                            res.redirect("/thanks");
-                        } else {
-                            res.redirect("/petition");
-                        }
-                    } else {
-                        res.render("login", {
-                            error1: "error"
-                        });
-                    }
-                })
-                .catch(e => {
-                    res.render("login", {
-                        error: "error"
-                    });
-                });
-        })
-        .catch(e => {
-            res.render("login", {
-                error: "error"
-            });
-        });
-});
-
-//// THANKS
-app.get("/thanks", (req, res) => {
-    db.getSignature(req.session.userId)
-        .then(signature => {
-            res.render("thanks", {
-                signature: signature[0].signature,
-                layout: "main"
-            });
-        })
-        .catch(err => {
-            res.redirect("/petition");
-        });
-});
-
-//// POST THANKS
-app.post("/thanks", (req, res) => {
-    db.deleteSignature(req.session.userId);
-    req.session.signatureId = null;
-    res.redirect("/petition");
-});
-
 //// SIGNERS
 app.get("/signers", (req, res) => {
     let signers = [];
@@ -369,6 +364,11 @@ app.get("/signers/:city", (req, res) => {
                 });
             });
     }
+});
+
+//// MANIFESTO
+app.get("/manifesto", (req, res) => {
+    res.render("manifesto");
 });
 
 //// LOGOUT
