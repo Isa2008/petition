@@ -1,6 +1,7 @@
 # Petition
 
-This site is made almost in a week during my training at SPICED Academy Berlin. It's an online petition that can be signed in real on Heroku here https://fashionrevolution.herokuapp.com/
+This site is made almost in a week during my training at SPICED Academy Berlin. 
+It's an online petition that can be signed in real on Heroku here https://fashionrevolution.herokuapp.com/
 
 ![Alt Text](demo-pics-gifs/petition.png)
 
