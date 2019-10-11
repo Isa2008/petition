@@ -40,4 +40,4 @@ Additionaly you can edit your profile information, delete your signature which m
 
 ![Alt Text](demo-pics-gifs/manifesto.png)
 
-*Who made my clothes?* asks about where our clothes are produced and especially from whom their made. This site takes reference to the Fashion Revolution.
+*Who made my clothes?* asks about where our clothes are produced and from whom their made. This site takes reference to the Fashion Revolution.
