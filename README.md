@@ -30,13 +30,14 @@ After registering you can add more information about yourself and sign the onlin
 
 See all signers or have a look at them divided by cities.
 
-### Edit your profile
+### Edit profile or delete signature
 
 ![Alt Text](demo-pics-gifs/profile.gif)
 
-Additionaly you can edit your profile information or delete your signature which makes you unsign the petition.
+Additionaly you can edit your profile information, delete your signature which makes you unsign the petition or simply logout and login again.
 
 ### Fashion Revolution Manifesto
 
 ![Alt Text](demo-pics-gifs/manifesto.png)
 
+*Who made my clothes?* asks about where our clothes are produced and especially from whom it is made. This site is a reference to the Fashion Revolution.
