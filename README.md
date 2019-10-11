@@ -17,4 +17,20 @@ As a volunteer of the Fashion Revolution in Berlin, this site is an example of h
 
 ## Demo petition
 
+### Sign online petition
+
 ![Alt Text](demo-pics-gifs/signing.gif)
+
+After registering you can add more information about yourself and sign the online petition.
+
+### See all signers
+
+![Alt Text](demo-pics-gifs/signers.gif)
+
+See all signers or have a look at them divided by cities.
+
+### Edit your profile
+
+![Alt Text](demo-pics-gifs/profile.gif)
+
+You can edit your profile information, additionaly delete your signature which makes you unsign the petition at the same time.
