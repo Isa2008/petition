@@ -1,7 +1,6 @@
 # Petition
 
 This site is made almost in a week during my training at SPICED Academy Berlin.
-
 It's an online petition that can be signed in real on Heroku here https://fashionrevolution.herokuapp.com/
 
 ![Alt Text](demo-pics-gifs/petition.png)
@@ -35,4 +34,9 @@ See all signers or have a look at them divided by cities.
 
 ![Alt Text](demo-pics-gifs/profile.gif)
 
-You can edit your profile information, additionaly delete your signature which makes you unsign the petition at the same time.
+Additionaly you can edit your profile information or delete your signature which makes you unsign the petition.
+
+### Fashion Revolution Manifesto
+
+![Alt Text](demo-pics-gifs/manifesto.png)
+
