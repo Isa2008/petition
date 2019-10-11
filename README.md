@@ -9,7 +9,7 @@ As a volunteer of the Fashion Revolution in Berlin, this site is an example of h
 
 # Tech Stack
 
-* HTML, CSS, Javascript, Node.js, Express, Hanldebars, PostgreSQL
+* HTML, CSS, Javascript, Node.js, Express, Handlebars, PostgreSQL
 
        Including a database with three tables:
               - Users with firstname, lastname, email, password
