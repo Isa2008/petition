@@ -16,7 +16,7 @@ As a volunteer of the Fashion Revolution in Berlin, this site is an example of h
               - Users_profiles with age, city, homepage
               - Signatures with signature, user_id
 
-## Demo petition
+# Demo petition
 
 ### Sign online petition
 
